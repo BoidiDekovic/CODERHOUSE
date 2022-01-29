@@ -12,21 +12,22 @@ while(totalDeAlumnos <= 10){
     if(isNaN(alumno)){
         alert("ingrese un numero")
         totalDeAlumnos = totalDeAlumnos - 1
-        alumnosAprobados = alumnosAprobados - 1
-    }
-    if(alumno > 10){
-        alert("la nota ingresada es incorrecta")
-        totalDeAlumnos = totalDeAlumnos - 1
-        alumnosAprobados = alumnosAprobados - 1
-        promedioAprobados = promedioAprobados - alumno
-    }
-    if(alumno < 7){
-        promedioDesaprobados = promedioDesaprobados + alumno
-        alumnosDesaprobados++
-        
     }else{
-        promedioAprobados = promedioAprobados + alumno
-        alumnosAprobados++
+        if(alumno > 10){
+            alert("la nota ingresada es incorrecta")
+            totalDeAlumnos = totalDeAlumnos - 1
+            alumnosAprobados = alumnosAprobados - 1
+            promedioAprobados = promedioAprobados - alumno
+           }
+        
+        if(alumno < 7){
+            promedioDesaprobados = promedioDesaprobados + alumno
+            alumnosDesaprobados++
+        
+        }else{
+            promedioAprobados = promedioAprobados + alumno
+            alumnosAprobados++
+        }
     }
     totalDeAlumnos++
 }
